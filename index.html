@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneBanc - EARN | TRACK | INVEST | GROW</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"
+          ><img src="./data/logo_onebanc.png" alt="" class="logo"
+        /></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textbox">
+          <h2>
+            RE: <br>
+            THINK <br><span></span>
+          </h2>
+          <p>
+            We are a Neo Bank and are here to re-imagine and re-invent Banking.
+            We are cool and simply awesome!
+          </p>
+          <a href="*#">Learn More</a>
+        </div>
+
+        <div class="imgbox">
+          <img src="./data/onebanc_man.png" class="man" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <h1
+            onclick="slider('./data/onebanc_man.png');changeCircleColor('#0387d1')"
+          >
+            <u>OneBanc</u>
+          </h1>
+        </li>
+        <li>
+          <h1
+            onclick="slider('./data/regular_bank.png');;changeCircleColor('#31aae3')"
+          >
+            <u>Regular Bank</u>
+          </h1>
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="./data/qr_code.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function slider(anything) {
+        document.querySelector(".man").src = anything;
+      }
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var navigation = document.querySelector(".navigation");
+
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
